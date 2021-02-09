@@ -26,10 +26,20 @@ void insertion_Sort(int arr[], int n)
 } 
 int main() 
 { 
-	int arr[] = {3, 6, 2, 1, 14, 7, 9, 8, 5, 11}; 
-	int size = sizeof(arr) / sizeof(arr[0]); 
-
+	int size; 
+	cout<<"Enter the size of array: ";
+	cin>>size;
+	int arr[size];
+	cout<<"Enter the elements: ";
+	for(int i=0; i<size; i++)
+		cin>>arr[i];
 	insertion_Sort(arr, size); 
-    cout<<"No. of comparisons made: "<<count;
+	cout<<"\nSorted array is: ";
+	for(int i=0; i<size; i++){
+		if(i>0 && i<size)
+			cout<<",";
+		cout<<" "<<arr[i];
+	}
+	cout<<"\nNo. of comparisons made: "<<count;
 	return 0; 
 }
